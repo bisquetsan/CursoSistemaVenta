@@ -36,8 +36,8 @@ namespace CapaPresentacion
             txtclave = new TextBox();
             label3 = new Label();
             label4 = new Label();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
+            btn_ingresar = new FontAwesome.Sharp.IconButton();
+            btn_cancelar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -85,7 +85,6 @@ namespace CapaPresentacion
             txtdocumento.Name = "txtdocumento";
             txtdocumento.Size = new Size(233, 23);
             txtdocumento.TabIndex = 3;
-            txtdocumento.TextChanged += textBox1_TextChanged;
             // 
             // txtclave
             // 
@@ -94,7 +93,6 @@ namespace CapaPresentacion
             txtclave.PasswordChar = '*';
             txtclave.Size = new Size(233, 23);
             txtclave.TabIndex = 4;
-            txtclave.TextChanged += textBox2_TextChanged;
             // 
             // label3
             // 
@@ -116,55 +114,55 @@ namespace CapaPresentacion
             label4.Text = "Contraseña";
             label4.Click += label4_Click;
             // 
-            // iconButton1
+            // btn_ingresar
             // 
-            iconButton1.BackColor = Color.RoyalBlue;
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderColor = Color.Black;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = Color.White;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            iconButton1.IconColor = Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 21;
-            iconButton1.Location = new Point(269, 160);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(93, 29);
-            iconButton1.TabIndex = 7;
-            iconButton1.Text = "Ingresar";
-            iconButton1.TextAlign = ContentAlignment.MiddleRight;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
-            iconButton1.Click += iconButton1_Click;
+            btn_ingresar.BackColor = Color.RoyalBlue;
+            btn_ingresar.Cursor = Cursors.Hand;
+            btn_ingresar.FlatAppearance.BorderColor = Color.Black;
+            btn_ingresar.FlatStyle = FlatStyle.Flat;
+            btn_ingresar.ForeColor = Color.White;
+            btn_ingresar.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            btn_ingresar.IconColor = Color.White;
+            btn_ingresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_ingresar.IconSize = 21;
+            btn_ingresar.Location = new Point(269, 160);
+            btn_ingresar.Name = "btn_ingresar";
+            btn_ingresar.Size = new Size(93, 29);
+            btn_ingresar.TabIndex = 7;
+            btn_ingresar.Text = "Ingresar";
+            btn_ingresar.TextAlign = ContentAlignment.MiddleRight;
+            btn_ingresar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_ingresar.UseVisualStyleBackColor = false;
+            btn_ingresar.Click += btn_ingresar_Click;
             // 
-            // iconButton2
+            // btn_cancelar
             // 
-            iconButton2.BackColor = Color.Firebrick;
-            iconButton2.Cursor = Cursors.Hand;
-            iconButton2.FlatAppearance.BorderColor = Color.Black;
-            iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.ForeColor = Color.White;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
-            iconButton2.IconColor = Color.White;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.IconSize = 21;
-            iconButton2.Location = new Point(409, 160);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(93, 29);
-            iconButton2.TabIndex = 8;
-            iconButton2.Text = "Cancelar";
-            iconButton2.TextAlign = ContentAlignment.MiddleRight;
-            iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton2.UseVisualStyleBackColor = false;
-            iconButton2.Click += iconButton2_Click;
+            btn_cancelar.BackColor = Color.Firebrick;
+            btn_cancelar.Cursor = Cursors.Hand;
+            btn_cancelar.FlatAppearance.BorderColor = Color.Black;
+            btn_cancelar.FlatStyle = FlatStyle.Flat;
+            btn_cancelar.ForeColor = Color.White;
+            btn_cancelar.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            btn_cancelar.IconColor = Color.White;
+            btn_cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_cancelar.IconSize = 21;
+            btn_cancelar.Location = new Point(409, 160);
+            btn_cancelar.Name = "btn_cancelar";
+            btn_cancelar.Size = new Size(93, 29);
+            btn_cancelar.TabIndex = 8;
+            btn_cancelar.Text = "Cancelar";
+            btn_cancelar.TextAlign = ContentAlignment.MiddleRight;
+            btn_cancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_cancelar.UseVisualStyleBackColor = false;
+            btn_cancelar.Click += btn_cancelar_Click;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(537, 237);
-            Controls.Add(iconButton2);
-            Controls.Add(iconButton1);
+            Controls.Add(btn_cancelar);
+            Controls.Add(btn_ingresar);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(txtclave);
@@ -176,19 +174,10 @@ namespace CapaPresentacion
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            int x = 1;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            int x = 1;
         }
 
         #endregion
@@ -200,7 +189,7 @@ namespace CapaPresentacion
         private TextBox txtclave;
         private Label label3;
         private Label label4;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btn_ingresar;
+        private FontAwesome.Sharp.IconButton btn_cancelar;
     }
 }

@@ -40,23 +40,32 @@ namespace CapaPresentacion
 
         }
 
-        private void iconButton2_Click(object sender, EventArgs e)
+        private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void btn_ingresar_Click(object sender, EventArgs e)
         {
+            List<Usuario> Test= new CN_Usuario().Listar();
+
+            Usuario ousario = new CN_Usuario().Listar().Where(u=> u.Documento == txtdocumento.Text && u.Clave == txtclave.Text).FirstOrDefault();
             Inicio form = new Inicio();
             form.Show();
             this.Hide();
             form.FormClosing += frm_closing;
         }
 
-        private void frm_closing(object sender, FormClosingEventArgs e) {
+        private void frm_closing(object sender, FormClosingEventArgs e)
+        {
             txtclave.Text = "";
             txtdocumento.Text = "";
             this.Show();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
