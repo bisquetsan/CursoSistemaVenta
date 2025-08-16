@@ -17,7 +17,7 @@ namespace CapaDatos
             using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
             {
                 try {
-                    string query = "select IdUsario,Documento,NombreCompleto,Correo,Clave,Estado from usuario";
+                    string query = "select IdUsuario,Documento,NombreCompleto,Correo,Clave,Estado from usuario";
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;
 
@@ -42,6 +42,16 @@ namespace CapaDatos
 
                 }catch (Exception ex) { 
                     lista = new List<Usuario>();
+                    lista.Add(new Usuario()
+                    {
+                        IdUsuario = 0,
+                        Documento = "Documento",
+                        NombreCompleto = "NombreCompleto",
+                        Correo = "Correo",
+                        Clave = "Clave",
+                        Estado = true,
+
+                    });
                 }
             }
             return lista; 
