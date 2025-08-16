@@ -32,8 +32,14 @@ namespace CapaPresentacion
             Menu = new MenuStrip();
             menuusuario = new FontAwesome.Sharp.IconMenuItem();
             menumantenedor = new FontAwesome.Sharp.IconMenuItem();
+            submenucategoria = new FontAwesome.Sharp.IconMenuItem();
+            submenuproducto = new FontAwesome.Sharp.IconMenuItem();
             menucompras = new FontAwesome.Sharp.IconMenuItem();
+            submenuregistrarcompra = new FontAwesome.Sharp.IconMenuItem();
+            submenuverdetallecompra = new FontAwesome.Sharp.IconMenuItem();
             menuventas = new FontAwesome.Sharp.IconMenuItem();
+            submenuregistrarventa = new FontAwesome.Sharp.IconMenuItem();
+            submenuverdetalleventa = new FontAwesome.Sharp.IconMenuItem();
             menuclientes = new FontAwesome.Sharp.IconMenuItem();
             menuproveedores = new FontAwesome.Sharp.IconMenuItem();
             menureportes = new FontAwesome.Sharp.IconMenuItem();
@@ -41,6 +47,8 @@ namespace CapaPresentacion
             MenuTitulo = new MenuStrip();
             label1 = new Label();
             contenedor = new Panel();
+            label2 = new Label();
+            lblusuario = new Label();
             Menu.SuspendLayout();
             SuspendLayout();
             // 
@@ -51,7 +59,7 @@ namespace CapaPresentacion
             Menu.Location = new Point(0, 66);
             Menu.Name = "Menu";
             Menu.RightToLeft = RightToLeft.No;
-            Menu.Size = new Size(1086, 73);
+            Menu.Size = new Size(1202, 73);
             Menu.TabIndex = 0;
             Menu.Text = "menuStrip1";
             Menu.ItemClicked += menuStrip1_ItemClicked;
@@ -67,10 +75,12 @@ namespace CapaPresentacion
             menuusuario.Size = new Size(80, 69);
             menuusuario.Text = "Usuario";
             menuusuario.TextImageRelation = TextImageRelation.ImageAboveText;
+            menuusuario.Click += menuusuario_Click;
             // 
             // menumantenedor
             // 
             menumantenedor.AutoSize = false;
+            menumantenedor.DropDownItems.AddRange(new ToolStripItem[] { submenucategoria, submenuproducto });
             menumantenedor.IconChar = FontAwesome.Sharp.IconChar.Tools;
             menumantenedor.IconColor = Color.Black;
             menumantenedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -79,11 +89,31 @@ namespace CapaPresentacion
             menumantenedor.Size = new Size(80, 69);
             menumantenedor.Text = "Mantenedor";
             menumantenedor.TextImageRelation = TextImageRelation.ImageAboveText;
-            menumantenedor.Click += menumantenedor_Click;
+            // 
+            // submenucategoria
+            // 
+            submenucategoria.IconChar = FontAwesome.Sharp.IconChar.None;
+            submenucategoria.IconColor = Color.Black;
+            submenucategoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            submenucategoria.Name = "submenucategoria";
+            submenucategoria.Size = new Size(125, 22);
+            submenucategoria.Text = "Categoria";
+            submenucategoria.Click += submenucategoria_Click;
+            // 
+            // submenuproducto
+            // 
+            submenuproducto.IconChar = FontAwesome.Sharp.IconChar.None;
+            submenuproducto.IconColor = Color.Black;
+            submenuproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            submenuproducto.Name = "submenuproducto";
+            submenuproducto.Size = new Size(125, 22);
+            submenuproducto.Text = "Producto";
+            submenuproducto.Click += submenuproducto_Click;
             // 
             // menucompras
             // 
             menucompras.AutoSize = false;
+            menucompras.DropDownItems.AddRange(new ToolStripItem[] { submenuregistrarcompra, submenuverdetallecompra });
             menucompras.IconChar = FontAwesome.Sharp.IconChar.CartFlatbed;
             menucompras.IconColor = Color.Black;
             menucompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -92,11 +122,31 @@ namespace CapaPresentacion
             menucompras.Size = new Size(80, 69);
             menucompras.Text = "Compras";
             menucompras.TextImageRelation = TextImageRelation.ImageAboveText;
-            menucompras.Click += iconMenuItem5_Click;
+            // 
+            // submenuregistrarcompra
+            // 
+            submenuregistrarcompra.IconChar = FontAwesome.Sharp.IconChar.None;
+            submenuregistrarcompra.IconColor = Color.Black;
+            submenuregistrarcompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            submenuregistrarcompra.Name = "submenuregistrarcompra";
+            submenuregistrarcompra.Size = new Size(129, 22);
+            submenuregistrarcompra.Text = "Registrar";
+            submenuregistrarcompra.Click += submenuregistrarcompra_Click;
+            // 
+            // submenuverdetallecompra
+            // 
+            submenuverdetallecompra.IconChar = FontAwesome.Sharp.IconChar.None;
+            submenuverdetallecompra.IconColor = Color.Black;
+            submenuverdetallecompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            submenuverdetallecompra.Name = "submenuverdetallecompra";
+            submenuverdetallecompra.Size = new Size(129, 22);
+            submenuverdetallecompra.Text = "Ver Detalle";
+            submenuverdetallecompra.Click += submenuverdetallecompra_Click;
             // 
             // menuventas
             // 
             menuventas.AutoSize = false;
+            menuventas.DropDownItems.AddRange(new ToolStripItem[] { submenuregistrarventa, submenuverdetalleventa });
             menuventas.IconChar = FontAwesome.Sharp.IconChar.Tags;
             menuventas.IconColor = Color.Black;
             menuventas.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -105,6 +155,26 @@ namespace CapaPresentacion
             menuventas.Size = new Size(80, 69);
             menuventas.Text = "Ventas";
             menuventas.TextImageRelation = TextImageRelation.ImageAboveText;
+            // 
+            // submenuregistrarventa
+            // 
+            submenuregistrarventa.IconChar = FontAwesome.Sharp.IconChar.None;
+            submenuregistrarventa.IconColor = Color.Black;
+            submenuregistrarventa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            submenuregistrarventa.Name = "submenuregistrarventa";
+            submenuregistrarventa.Size = new Size(129, 22);
+            submenuregistrarventa.Text = "Registrar";
+            submenuregistrarventa.Click += submenuregistrarventa_Click;
+            // 
+            // submenuverdetalleventa
+            // 
+            submenuverdetalleventa.IconChar = FontAwesome.Sharp.IconChar.None;
+            submenuverdetalleventa.IconColor = Color.Black;
+            submenuverdetalleventa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            submenuverdetalleventa.Name = "submenuverdetalleventa";
+            submenuverdetalleventa.Size = new Size(129, 22);
+            submenuverdetalleventa.Text = "Ver Detalle";
+            submenuverdetalleventa.Click += submenuverdetalleventa_Click;
             // 
             // menuclientes
             // 
@@ -117,7 +187,7 @@ namespace CapaPresentacion
             menuclientes.Size = new Size(80, 69);
             menuclientes.Text = "Clientes";
             menuclientes.TextImageRelation = TextImageRelation.ImageAboveText;
-            menuclientes.Click += iconMenuItem1_Click;
+            menuclientes.Click += menuclientes_Click;
             // 
             // menuproveedores
             // 
@@ -130,7 +200,7 @@ namespace CapaPresentacion
             menuproveedores.Size = new Size(80, 69);
             menuproveedores.Text = "Proveedores";
             menuproveedores.TextImageRelation = TextImageRelation.ImageAboveText;
-            menuproveedores.Click += iconMenuItem6_Click;
+            menuproveedores.Click += menuproveedores_Click;
             // 
             // menureportes
             // 
@@ -143,6 +213,7 @@ namespace CapaPresentacion
             menureportes.Size = new Size(80, 69);
             menureportes.Text = "Reportes";
             menureportes.TextImageRelation = TextImageRelation.ImageAboveText;
+            menureportes.Click += menureportes_Click;
             // 
             // menuacercade
             // 
@@ -163,7 +234,7 @@ namespace CapaPresentacion
             MenuTitulo.Location = new Point(0, 0);
             MenuTitulo.Name = "MenuTitulo";
             MenuTitulo.RightToLeft = RightToLeft.Yes;
-            MenuTitulo.Size = new Size(1086, 66);
+            MenuTitulo.Size = new Size(1202, 66);
             MenuTitulo.TabIndex = 1;
             MenuTitulo.Text = "menuStrip2";
             // 
@@ -172,7 +243,7 @@ namespace CapaPresentacion
             label1.AutoSize = true;
             label1.BackColor = Color.SteelBlue;
             label1.Font = new Font("Segoe UI", 20F);
-            label1.ForeColor = Color.LightSteelBlue;
+            label1.ForeColor = Color.White;
             label1.Location = new Point(20, 13);
             label1.Name = "label1";
             label1.Size = new Size(231, 37);
@@ -184,15 +255,42 @@ namespace CapaPresentacion
             contenedor.Dock = DockStyle.Fill;
             contenedor.Location = new Point(0, 139);
             contenedor.Name = "contenedor";
-            contenedor.Size = new Size(1086, 311);
+            contenedor.Size = new Size(1202, 530);
             contenedor.TabIndex = 3;
             contenedor.Paint += contenedor_Paint;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.SteelBlue;
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(790, 24);
+            label2.Name = "label2";
+            label2.Size = new Size(67, 21);
+            label2.TabIndex = 4;
+            label2.Text = "Usuario:";
+            // 
+            // lblusuario
+            // 
+            lblusuario.AutoSize = true;
+            lblusuario.BackColor = Color.SteelBlue;
+            lblusuario.Font = new Font("Segoe UI", 12F);
+            lblusuario.ForeColor = Color.White;
+            lblusuario.Location = new Point(854, 24);
+            lblusuario.Name = "lblusuario";
+            lblusuario.Size = new Size(70, 21);
+            lblusuario.TabIndex = 5;
+            lblusuario.Text = "lblsuario";
+            lblusuario.Click += label3_Click;
             // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1086, 450);
+            ClientSize = new Size(1202, 669);
+            Controls.Add(lblusuario);
+            Controls.Add(label2);
             Controls.Add(contenedor);
             Controls.Add(label1);
             Controls.Add(Menu);
@@ -200,6 +298,7 @@ namespace CapaPresentacion
             MainMenuStrip = Menu;
             Name = "Inicio";
             Text = "Form1";
+            Load += Inicio_Load;
             Menu.ResumeLayout(false);
             Menu.PerformLayout();
             ResumeLayout(false);
@@ -226,5 +325,13 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconMenuItem menuclientes;
         private FontAwesome.Sharp.IconMenuItem menuusuario;
         private Panel contenedor;
+        private Label label2;
+        private Label lblusuario;
+        private FontAwesome.Sharp.IconMenuItem submenucategoria;
+        private FontAwesome.Sharp.IconMenuItem submenuproducto;
+        private FontAwesome.Sharp.IconMenuItem submenuregistrarcompra;
+        private FontAwesome.Sharp.IconMenuItem submenuverdetallecompra;
+        private FontAwesome.Sharp.IconMenuItem submenuregistrarventa;
+        private FontAwesome.Sharp.IconMenuItem submenuverdetalleventa;
     }
 }

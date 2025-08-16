@@ -42,16 +42,6 @@ namespace CapaDatos
 
                 }catch (Exception ex) { 
                     lista = new List<Usuario>();
-                    lista.Add(new Usuario()
-                    {
-                        IdUsuario = 0,
-                        Documento = "Documento",
-                        NombreCompleto = "NombreCompleto",
-                        Correo = "Correo",
-                        Clave = "Clave",
-                        Estado = true,
-
-                    });
                 }
             }
             return lista; 

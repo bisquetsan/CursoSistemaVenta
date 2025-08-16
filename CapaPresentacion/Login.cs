@@ -50,10 +50,19 @@ namespace CapaPresentacion
             List<Usuario> Test= new CN_Usuario().Listar();
 
             Usuario ousario = new CN_Usuario().Listar().Where(u=> u.Documento == txtdocumento.Text && u.Clave == txtclave.Text).FirstOrDefault();
-            Inicio form = new Inicio();
-            form.Show();
-            this.Hide();
-            form.FormClosing += frm_closing;
+
+            if (ousario != null)
+            {
+                Inicio form = new Inicio(ousario);
+                form.Show();
+                this.Hide();
+                form.FormClosing += frm_closing;
+            }
+            else
+            {
+                MessageBox.Show("No se encontró el usuario","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+            
         }
 
         private void frm_closing(object sender, FormClosingEventArgs e)
