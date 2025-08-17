@@ -30,7 +30,7 @@ namespace CapaPresentacion
         private void InitializeComponent()
         {
             Menu = new MenuStrip();
-            menuusuario = new FontAwesome.Sharp.IconMenuItem();
+            menuusuarios = new FontAwesome.Sharp.IconMenuItem();
             menumantenedor = new FontAwesome.Sharp.IconMenuItem();
             submenucategoria = new FontAwesome.Sharp.IconMenuItem();
             submenuproducto = new FontAwesome.Sharp.IconMenuItem();
@@ -54,28 +54,28 @@ namespace CapaPresentacion
             // 
             // Menu
             // 
-            Menu.BackColor = SystemColors.Control;
-            Menu.Items.AddRange(new ToolStripItem[] { menuusuario, menumantenedor, menucompras, menuventas, menuclientes, menuproveedores, menureportes, menuacercade });
+            Menu.BackColor = Color.White;
+            Menu.Items.AddRange(new ToolStripItem[] { menuusuarios, menumantenedor, menucompras, menuventas, menuclientes, menuproveedores, menureportes, menuacercade });
             Menu.Location = new Point(0, 66);
             Menu.Name = "Menu";
             Menu.RightToLeft = RightToLeft.No;
-            Menu.Size = new Size(1202, 73);
+            Menu.Size = new Size(1097, 73);
             Menu.TabIndex = 0;
             Menu.Text = "menuStrip1";
             Menu.ItemClicked += menuStrip1_ItemClicked;
             // 
-            // menuusuario
+            // menuusuarios
             // 
-            menuusuario.AutoSize = false;
-            menuusuario.IconChar = FontAwesome.Sharp.IconChar.UserGear;
-            menuusuario.IconColor = Color.Black;
-            menuusuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            menuusuario.ImageScaling = ToolStripItemImageScaling.None;
-            menuusuario.Name = "menuusuario";
-            menuusuario.Size = new Size(80, 69);
-            menuusuario.Text = "Usuario";
-            menuusuario.TextImageRelation = TextImageRelation.ImageAboveText;
-            menuusuario.Click += menuusuario_Click;
+            menuusuarios.AutoSize = false;
+            menuusuarios.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            menuusuarios.IconColor = Color.Black;
+            menuusuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            menuusuarios.ImageScaling = ToolStripItemImageScaling.None;
+            menuusuarios.Name = "menuusuarios";
+            menuusuarios.Size = new Size(80, 69);
+            menuusuarios.Text = "Usuario";
+            menuusuarios.TextImageRelation = TextImageRelation.ImageAboveText;
+            menuusuarios.Click += menuusuario_Click;
             // 
             // menumantenedor
             // 
@@ -234,7 +234,7 @@ namespace CapaPresentacion
             MenuTitulo.Location = new Point(0, 0);
             MenuTitulo.Name = "MenuTitulo";
             MenuTitulo.RightToLeft = RightToLeft.Yes;
-            MenuTitulo.Size = new Size(1202, 66);
+            MenuTitulo.Size = new Size(1097, 66);
             MenuTitulo.TabIndex = 1;
             MenuTitulo.Text = "menuStrip2";
             // 
@@ -255,9 +255,8 @@ namespace CapaPresentacion
             contenedor.Dock = DockStyle.Fill;
             contenedor.Location = new Point(0, 139);
             contenedor.Name = "contenedor";
-            contenedor.Size = new Size(1202, 530);
+            contenedor.Size = new Size(1097, 478);
             contenedor.TabIndex = 3;
-            contenedor.Paint += contenedor_Paint;
             // 
             // label2
             // 
@@ -265,7 +264,7 @@ namespace CapaPresentacion
             label2.BackColor = Color.SteelBlue;
             label2.Font = new Font("Segoe UI", 12F);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(790, 24);
+            label2.Location = new Point(824, 24);
             label2.Name = "label2";
             label2.Size = new Size(67, 21);
             label2.TabIndex = 4;
@@ -277,18 +276,17 @@ namespace CapaPresentacion
             lblusuario.BackColor = Color.SteelBlue;
             lblusuario.Font = new Font("Segoe UI", 12F);
             lblusuario.ForeColor = Color.White;
-            lblusuario.Location = new Point(854, 24);
+            lblusuario.Location = new Point(888, 24);
             lblusuario.Name = "lblusuario";
             lblusuario.Size = new Size(70, 21);
             lblusuario.TabIndex = 5;
             lblusuario.Text = "lblsuario";
-            lblusuario.Click += label3_Click;
             // 
             // Inicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1202, 669);
+            ClientSize = new Size(1097, 617);
             Controls.Add(lblusuario);
             Controls.Add(label2);
             Controls.Add(contenedor);
@@ -297,6 +295,7 @@ namespace CapaPresentacion
             Controls.Add(MenuTitulo);
             MainMenuStrip = Menu;
             Name = "Inicio";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Inicio_Load;
             Menu.ResumeLayout(false);
@@ -323,7 +322,7 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconMenuItem menureportes;
         private FontAwesome.Sharp.IconMenuItem menuacercade;
         private FontAwesome.Sharp.IconMenuItem menuclientes;
-        private FontAwesome.Sharp.IconMenuItem menuusuario;
+        private FontAwesome.Sharp.IconMenuItem menuusuarios;
         private Panel contenedor;
         private Label label2;
         private Label lblusuario;

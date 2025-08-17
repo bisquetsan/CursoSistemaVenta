@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaPresentacion.Utilidades;
+using CapaEntidad;
+using CapaNegocio;
 
 namespace CapaPresentacion
 {
@@ -15,6 +18,14 @@ namespace CapaPresentacion
         public frmUsuarios()
         {
             InitializeComponent();
+        }
+
+        private void frmUsuarios_Load(object sender, EventArgs e)
+        {
+            cboestado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo"} );
+            cboestado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "No activo" });
+            cboestado.DisplayMember = "Texto";
+            cboestado.ValueMember = "Valor";
         }
     }
 }
