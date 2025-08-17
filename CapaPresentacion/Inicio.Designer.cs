@@ -255,7 +255,7 @@ namespace CapaPresentacion
             contenedor.Dock = DockStyle.Fill;
             contenedor.Location = new Point(0, 139);
             contenedor.Name = "contenedor";
-            contenedor.Size = new Size(1097, 478);
+            contenedor.Size = new Size(1097, 504);
             contenedor.TabIndex = 3;
             // 
             // label2
@@ -286,7 +286,7 @@ namespace CapaPresentacion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1097, 617);
+            ClientSize = new Size(1097, 643);
             Controls.Add(lblusuario);
             Controls.Add(label2);
             Controls.Add(contenedor);

@@ -34,7 +34,7 @@ namespace CapaDatos
                             lista.Add(new Rol()
                             {
                                 IdRol = Convert.ToInt32(dr["IdRol"]),
-                                Description = dr["Description"].ToString(),
+                                Descripcion = dr["Descripcion"].ToString(),
 
                             });
                         }
