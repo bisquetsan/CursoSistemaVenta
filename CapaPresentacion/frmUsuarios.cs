@@ -38,7 +38,7 @@ namespace CapaPresentacion
             cborol.ValueMember = "Valor";
             cborol.SelectedIndex = 0;
 
-            
+
             foreach (DataGridViewColumn columna in dgvdata.Columns)
             {
                 if (columna.Visible == true && columna.Name != "btnseleccionar")
@@ -72,7 +72,7 @@ namespace CapaPresentacion
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            dgvdata.Rows.Add(new object[] {"",
+            /*dgvdata.Rows.Add(new object[] {"",
                 txtid.Text,
                 txtdocumento.Text,
                 txtnombrecompleto.Text,
@@ -83,7 +83,7 @@ namespace CapaPresentacion
                 ((OpcionCombo)cboestado.SelectedItem).Valor.ToString(),
                 ((OpcionCombo)cboestado.SelectedItem).Texto.ToString(),
             });
-            Limpiar();
+            Limpiar();*/
         }
 
         private void Limpiar()
@@ -96,9 +96,10 @@ namespace CapaPresentacion
             txtconfimarclave.Text = "";
             cboestado.SelectedIndex = 0;
             cborol.SelectedIndex = 0;
+            txtindice.Text = "0";
         }
 
-        private void btnlimpiar_Click(object sender, EventArgs e)
+        private void btnlimpiarbuscador_Click(object sender, EventArgs e)
         {
             txtbusqueda.Text = "";
         }
@@ -126,8 +127,8 @@ namespace CapaPresentacion
             if (dgvdata.Columns[e.ColumnIndex].Name == "btnseleccionar")
             {
                 int indice = e.RowIndex;
-
-                if(indice >= 0)
+                txtindice.Text = (indice + 1).ToString();
+                if (indice >= 0)
                 {
                     txtid.Text = dgvdata.Rows[indice].Cells["IdUsuario"].Value.ToString();
                     txtdocumento.Text = dgvdata.Rows[indice].Cells["Documento"].Value.ToString();
@@ -139,6 +140,11 @@ namespace CapaPresentacion
                     cboestado.SelectedIndex = Convert.ToInt32(dgvdata.Rows[indice].Cells["EstadoValor"].Value);
                 }
             }
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }
