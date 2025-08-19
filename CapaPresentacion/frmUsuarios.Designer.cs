@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label1 = new Label();
             txt = new Label();
             label3 = new Label();
@@ -87,7 +87,7 @@
             txt.AutoSize = true;
             txt.BackColor = Color.White;
             txt.Font = new Font("Segoe UI", 9F);
-            txt.Location = new Point(41, 58);
+            txt.Location = new Point(41, 48);
             txt.Name = "txt";
             txt.Size = new Size(93, 15);
             txt.TabIndex = 1;
@@ -98,7 +98,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.White;
             label3.Font = new Font("Segoe UI", 9F);
-            label3.Location = new Point(41, 108);
+            label3.Location = new Point(41, 98);
             label3.Name = "label3";
             label3.Size = new Size(100, 15);
             label3.TabIndex = 2;
@@ -110,7 +110,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.White;
             label4.Font = new Font("Segoe UI", 9F);
-            label4.Location = new Point(41, 158);
+            label4.Location = new Point(41, 148);
             label4.Name = "label4";
             label4.Size = new Size(43, 15);
             label4.TabIndex = 3;
@@ -121,7 +121,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.White;
             label5.Font = new Font("Segoe UI", 9F);
-            label5.Location = new Point(41, 208);
+            label5.Location = new Point(41, 198);
             label5.Name = "label5";
             label5.Size = new Size(67, 15);
             label5.TabIndex = 4;
@@ -132,7 +132,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.White;
             label6.Font = new Font("Segoe UI", 9F);
-            label6.Location = new Point(41, 258);
+            label6.Location = new Point(41, 248);
             label6.Name = "label6";
             label6.Size = new Size(124, 15);
             label6.TabIndex = 5;
@@ -140,21 +140,21 @@
             // 
             // txtdocumento
             // 
-            txtdocumento.Location = new Point(41, 76);
+            txtdocumento.Location = new Point(41, 66);
             txtdocumento.Name = "txtdocumento";
             txtdocumento.Size = new Size(194, 23);
             txtdocumento.TabIndex = 6;
             // 
             // txtnombrecompleto
             // 
-            txtnombrecompleto.Location = new Point(41, 126);
+            txtnombrecompleto.Location = new Point(41, 116);
             txtnombrecompleto.Name = "txtnombrecompleto";
             txtnombrecompleto.Size = new Size(194, 23);
             txtnombrecompleto.TabIndex = 7;
             // 
             // txtclave
             // 
-            txtclave.Location = new Point(41, 226);
+            txtclave.Location = new Point(41, 216);
             txtclave.Name = "txtclave";
             txtclave.PasswordChar = '*';
             txtclave.Size = new Size(194, 23);
@@ -162,14 +162,14 @@
             // 
             // txtcorreo
             // 
-            txtcorreo.Location = new Point(41, 176);
+            txtcorreo.Location = new Point(41, 166);
             txtcorreo.Name = "txtcorreo";
             txtcorreo.Size = new Size(194, 23);
             txtcorreo.TabIndex = 8;
             // 
             // txtconfimarclave
             // 
-            txtconfimarclave.Location = new Point(41, 276);
+            txtconfimarclave.Location = new Point(41, 266);
             txtconfimarclave.Name = "txtconfimarclave";
             txtconfimarclave.PasswordChar = '*';
             txtconfimarclave.Size = new Size(194, 23);
@@ -179,7 +179,7 @@
             // 
             cborol.DropDownStyle = ComboBoxStyle.DropDownList;
             cborol.FormattingEnabled = true;
-            cborol.Location = new Point(41, 326);
+            cborol.Location = new Point(41, 316);
             cborol.Name = "cborol";
             cborol.Size = new Size(194, 23);
             cborol.TabIndex = 11;
@@ -188,7 +188,7 @@
             // 
             cboestado.DropDownStyle = ComboBoxStyle.DropDownList;
             cboestado.FormattingEnabled = true;
-            cboestado.Location = new Point(41, 377);
+            cboestado.Location = new Point(41, 367);
             cboestado.Name = "cboestado";
             cboestado.Size = new Size(194, 23);
             cboestado.TabIndex = 12;
@@ -198,7 +198,7 @@
             label7.AutoSize = true;
             label7.BackColor = Color.White;
             label7.Font = new Font("Segoe UI", 9F);
-            label7.Location = new Point(41, 308);
+            label7.Location = new Point(41, 298);
             label7.Name = "label7";
             label7.Size = new Size(24, 15);
             label7.TabIndex = 13;
@@ -209,7 +209,7 @@
             label8.AutoSize = true;
             label8.BackColor = Color.White;
             label8.Font = new Font("Segoe UI", 9F);
-            label8.Location = new Point(41, 359);
+            label8.Location = new Point(41, 349);
             label8.Name = "label8";
             label8.Size = new Size(42, 15);
             label8.TabIndex = 14;
@@ -226,7 +226,7 @@
             btnguardar.IconColor = Color.White;
             btnguardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnguardar.IconSize = 20;
-            btnguardar.Location = new Point(41, 416);
+            btnguardar.Location = new Point(41, 403);
             btnguardar.Name = "btnguardar";
             btnguardar.Size = new Size(194, 26);
             btnguardar.TabIndex = 15;
@@ -247,7 +247,7 @@
             btnlimpiar.IconColor = Color.White;
             btnlimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnlimpiar.IconSize = 20;
-            btnlimpiar.Location = new Point(41, 450);
+            btnlimpiar.Location = new Point(41, 437);
             btnlimpiar.Name = "btnlimpiar";
             btnlimpiar.Size = new Size(194, 26);
             btnlimpiar.TabIndex = 16;
@@ -268,7 +268,7 @@
             btneliminar.IconColor = Color.White;
             btneliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btneliminar.IconSize = 20;
-            btneliminar.Location = new Point(41, 484);
+            btneliminar.Location = new Point(41, 471);
             btneliminar.Name = "btneliminar";
             btneliminar.Size = new Size(194, 26);
             btneliminar.TabIndex = 17;
@@ -283,7 +283,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.White;
             label2.Font = new Font("Segoe UI", 15F);
-            label2.Location = new Point(41, 16);
+            label2.Location = new Point(41, 6);
             label2.Name = "label2";
             label2.Size = new Size(172, 28);
             label2.TabIndex = 18;
@@ -292,24 +292,24 @@
             // dgvdata
             // 
             dgvdata.AllowUserToAddRows = false;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new Padding(2);
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvdata.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvdata.Columns.AddRange(new DataGridViewColumn[] { btnseleccionar, IdUsuario, Documento, NombreCompleto, Correo, Clave, IdRol, Rol, EstadoValor, Estado });
-            dgvdata.Location = new Point(305, 117);
+            dgvdata.Location = new Point(305, 110);
             dgvdata.MultiSelect = false;
             dgvdata.Name = "dgvdata";
             dgvdata.ReadOnly = true;
-            dataGridViewCellStyle6.SelectionBackColor = Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
-            dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvdata.RowTemplate.Height = 28;
             dgvdata.Size = new Size(761, 405);
             dgvdata.TabIndex = 19;
@@ -388,7 +388,7 @@
             // 
             label9.BackColor = Color.White;
             label9.Font = new Font("Segoe UI", 17F);
-            label9.Location = new Point(305, 37);
+            label9.Location = new Point(305, 30);
             label9.Name = "label9";
             label9.Size = new Size(761, 65);
             label9.TabIndex = 20;
@@ -397,7 +397,7 @@
             // 
             // txtid
             // 
-            txtid.Location = new Point(208, 48);
+            txtid.Location = new Point(208, 38);
             txtid.Name = "txtid";
             txtid.Size = new Size(27, 23);
             txtid.TabIndex = 21;
@@ -407,7 +407,7 @@
             // cbobusqueda
             // 
             cbobusqueda.FormattingEnabled = true;
-            cbobusqueda.Location = new Point(691, 64);
+            cbobusqueda.Location = new Point(691, 57);
             cbobusqueda.Name = "cbobusqueda";
             cbobusqueda.Size = new Size(108, 23);
             cbobusqueda.TabIndex = 22;
@@ -417,7 +417,7 @@
             label10.AutoSize = true;
             label10.BackColor = Color.White;
             label10.Font = new Font("Segoe UI", 9F);
-            label10.Location = new Point(622, 69);
+            label10.Location = new Point(622, 62);
             label10.Name = "label10";
             label10.Size = new Size(66, 15);
             label10.TabIndex = 23;
@@ -425,7 +425,7 @@
             // 
             // txtbusqueda
             // 
-            txtbusqueda.Location = new Point(805, 64);
+            txtbusqueda.Location = new Point(805, 57);
             txtbusqueda.Name = "txtbusqueda";
             txtbusqueda.Size = new Size(136, 23);
             txtbusqueda.TabIndex = 24;
@@ -441,7 +441,7 @@
             btnlimpiarbuscador.IconColor = Color.White;
             btnlimpiarbuscador.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnlimpiarbuscador.IconSize = 20;
-            btnlimpiarbuscador.Location = new Point(1008, 62);
+            btnlimpiarbuscador.Location = new Point(1008, 55);
             btnlimpiarbuscador.Name = "btnlimpiarbuscador";
             btnlimpiarbuscador.Size = new Size(49, 25);
             btnlimpiarbuscador.TabIndex = 26;
@@ -460,7 +460,7 @@
             btnbusqueda.IconColor = Color.White;
             btnbusqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnbusqueda.IconSize = 20;
-            btnbusqueda.Location = new Point(951, 62);
+            btnbusqueda.Location = new Point(951, 55);
             btnbusqueda.Name = "btnbusqueda";
             btnbusqueda.Size = new Size(49, 25);
             btnbusqueda.TabIndex = 25;
@@ -469,7 +469,7 @@
             // 
             // txtindice
             // 
-            txtindice.Location = new Point(175, 48);
+            txtindice.Location = new Point(175, 38);
             txtindice.Name = "txtindice";
             txtindice.Size = new Size(27, 23);
             txtindice.TabIndex = 27;
@@ -481,7 +481,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1111, 534);
+            ClientSize = new Size(1091, 534);
             Controls.Add(txtindice);
             Controls.Add(btnlimpiarbuscador);
             Controls.Add(btnbusqueda);
