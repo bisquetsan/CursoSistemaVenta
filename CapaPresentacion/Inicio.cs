@@ -35,6 +35,7 @@ namespace CapaPresentacion
             }
 
             lblusuario.Text = usuarioActual.NombreCompleto;
+            AbrirFormulario(menuventas, new frmUsuarios());
         }
 
         private void AbrirFormulario(IconMenuItem menu, Form formulario)
@@ -107,6 +108,11 @@ namespace CapaPresentacion
         private void menureportes_Click(object sender, EventArgs e)
         {
             AbrirFormulario((IconMenuItem)sender, new frmReportes());
+        }
+
+        private void iconMenuItem2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

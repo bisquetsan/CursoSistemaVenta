@@ -45,18 +45,20 @@ namespace CapaPresentacion
             menureportes = new FontAwesome.Sharp.IconMenuItem();
             menuacercade = new FontAwesome.Sharp.IconMenuItem();
             MenuTitulo = new MenuStrip();
+            logout_btn = new FontAwesome.Sharp.IconMenuItem();
             label1 = new Label();
             contenedor = new Panel();
             label2 = new Label();
             lblusuario = new Label();
             Menu.SuspendLayout();
+            MenuTitulo.SuspendLayout();
             SuspendLayout();
             // 
             // Menu
             // 
             Menu.BackColor = Color.White;
             Menu.Items.AddRange(new ToolStripItem[] { menuusuarios, menumantenedor, menucompras, menuventas, menuclientes, menuproveedores, menureportes, menuacercade });
-            Menu.Location = new Point(0, 66);
+            Menu.Location = new Point(0, 72);
             Menu.Name = "Menu";
             Menu.RightToLeft = RightToLeft.No;
             Menu.Size = new Size(1184, 73);
@@ -231,12 +233,28 @@ namespace CapaPresentacion
             // 
             MenuTitulo.AutoSize = false;
             MenuTitulo.BackColor = Color.SteelBlue;
+            MenuTitulo.Items.AddRange(new ToolStripItem[] { logout_btn });
             MenuTitulo.Location = new Point(0, 0);
             MenuTitulo.Name = "MenuTitulo";
             MenuTitulo.RightToLeft = RightToLeft.Yes;
-            MenuTitulo.Size = new Size(1184, 66);
+            MenuTitulo.Size = new Size(1184, 72);
             MenuTitulo.TabIndex = 1;
             MenuTitulo.Text = "menuStrip2";
+            // 
+            // logout_btn
+            // 
+            logout_btn.AutoSize = false;
+            logout_btn.Font = new Font("Segoe UI", 11F);
+            logout_btn.ForeColor = Color.White;
+            logout_btn.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
+            logout_btn.IconColor = Color.White;
+            logout_btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            logout_btn.ImageScaling = ToolStripItemImageScaling.None;
+            logout_btn.Name = "logout_btn";
+            logout_btn.Size = new Size(80, 69);
+            logout_btn.Text = "SALIR";
+            logout_btn.TextImageRelation = TextImageRelation.ImageAboveText;
+            logout_btn.Click += iconMenuItem2_Click;
             // 
             // label1
             // 
@@ -244,7 +262,7 @@ namespace CapaPresentacion
             label1.BackColor = Color.SteelBlue;
             label1.Font = new Font("Segoe UI", 20F);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(20, 13);
+            label1.Location = new Point(20, 14);
             label1.Name = "label1";
             label1.Size = new Size(231, 37);
             label1.TabIndex = 2;
@@ -253,9 +271,9 @@ namespace CapaPresentacion
             // contenedor
             // 
             contenedor.Dock = DockStyle.Fill;
-            contenedor.Location = new Point(0, 139);
+            contenedor.Location = new Point(0, 145);
             contenedor.Name = "contenedor";
-            contenedor.Size = new Size(1184, 522);
+            contenedor.Size = new Size(1184, 616);
             contenedor.TabIndex = 3;
             // 
             // label2
@@ -265,7 +283,7 @@ namespace CapaPresentacion
             label2.BackColor = Color.SteelBlue;
             label2.Font = new Font("Segoe UI", 12F);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(824, 24);
+            label2.Location = new Point(884, 26);
             label2.Name = "label2";
             label2.Size = new Size(67, 21);
             label2.TabIndex = 4;
@@ -278,7 +296,7 @@ namespace CapaPresentacion
             lblusuario.BackColor = Color.SteelBlue;
             lblusuario.Font = new Font("Segoe UI", 12F);
             lblusuario.ForeColor = Color.White;
-            lblusuario.Location = new Point(888, 24);
+            lblusuario.Location = new Point(948, 26);
             lblusuario.Name = "lblusuario";
             lblusuario.Size = new Size(70, 21);
             lblusuario.TabIndex = 5;
@@ -288,7 +306,7 @@ namespace CapaPresentacion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1184, 661);
+            ClientSize = new Size(1184, 761);
             Controls.Add(lblusuario);
             Controls.Add(label2);
             Controls.Add(contenedor);
@@ -302,6 +320,8 @@ namespace CapaPresentacion
             Load += Inicio_Load;
             Menu.ResumeLayout(false);
             Menu.PerformLayout();
+            MenuTitulo.ResumeLayout(false);
+            MenuTitulo.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -334,5 +354,6 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconMenuItem submenuverdetallecompra;
         private FontAwesome.Sharp.IconMenuItem submenuregistrarventa;
         private FontAwesome.Sharp.IconMenuItem submenuverdetalleventa;
+        private FontAwesome.Sharp.IconMenuItem logout_btn;
     }
 }
