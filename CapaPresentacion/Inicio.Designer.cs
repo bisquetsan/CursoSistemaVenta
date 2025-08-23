@@ -59,7 +59,7 @@ namespace CapaPresentacion
             Menu.Location = new Point(0, 66);
             Menu.Name = "Menu";
             Menu.RightToLeft = RightToLeft.No;
-            Menu.Size = new Size(1097, 73);
+            Menu.Size = new Size(1184, 73);
             Menu.TabIndex = 0;
             Menu.Text = "menuStrip1";
             Menu.ItemClicked += menuStrip1_ItemClicked;
@@ -234,7 +234,7 @@ namespace CapaPresentacion
             MenuTitulo.Location = new Point(0, 0);
             MenuTitulo.Name = "MenuTitulo";
             MenuTitulo.RightToLeft = RightToLeft.Yes;
-            MenuTitulo.Size = new Size(1097, 66);
+            MenuTitulo.Size = new Size(1184, 66);
             MenuTitulo.TabIndex = 1;
             MenuTitulo.Text = "menuStrip2";
             // 
@@ -255,11 +255,12 @@ namespace CapaPresentacion
             contenedor.Dock = DockStyle.Fill;
             contenedor.Location = new Point(0, 139);
             contenedor.Name = "contenedor";
-            contenedor.Size = new Size(1097, 504);
+            contenedor.Size = new Size(1184, 522);
             contenedor.TabIndex = 3;
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.BackColor = Color.SteelBlue;
             label2.Font = new Font("Segoe UI", 12F);
@@ -272,6 +273,7 @@ namespace CapaPresentacion
             // 
             // lblusuario
             // 
+            lblusuario.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblusuario.AutoSize = true;
             lblusuario.BackColor = Color.SteelBlue;
             lblusuario.Font = new Font("Segoe UI", 12F);
@@ -286,7 +288,7 @@ namespace CapaPresentacion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1097, 643);
+            ClientSize = new Size(1184, 661);
             Controls.Add(lblusuario);
             Controls.Add(label2);
             Controls.Add(contenedor);
