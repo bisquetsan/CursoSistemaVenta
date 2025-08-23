@@ -156,11 +156,6 @@ namespace CapaPresentacion
             txtindice.Text = "-1";
         }
 
-        private void btnlimpiarbuscador_Click(object sender, EventArgs e)
-        {
-            txtbusqueda.Text = "";
-        }
-
         private void dgvdata_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
             if (e.RowIndex < 0)
@@ -246,9 +241,32 @@ namespace CapaPresentacion
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
+        private void btnbusqueda_Click(object sender, EventArgs e)
+        {
+            string columnafiltro = ((OpcionCombo)cbobusqueda.SelectedItem).Valor.ToString();
+            if (dgvdata.Rows.Count>0)
+            {
+                foreach (DataGridViewRow row in dgvdata.Rows)
+                {
+                    if (row.Cells[columnafiltro].Value.ToString().Trim().ToUpper().Contains(txtbusqueda.Text.Trim().ToUpper()))
+                    {
+                        row.Visible = true;
+                    }
+                    else
+                        row.Visible = false;
+                }
+            }
+             
+        }
+
+        private void btnlimpiarbuscador_Click(object sender, EventArgs e)
+        {
+            txtbusqueda.Text = "";
+            foreach (DataGridViewRow row in dgvdata.Rows)
+            {
+                row.Visible = true;
+            }
         }
     }
 }
