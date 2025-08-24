@@ -32,7 +32,7 @@ namespace CapaNegocio
 
             if (obj.Descripcion == "")
             {
-                Mensaje += "Es necesario la Descripcion del Producto\n";
+                obj.Descripcion = "-";
             }
             if (Mensaje != string.Empty)
             {

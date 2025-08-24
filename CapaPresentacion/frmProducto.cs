@@ -24,8 +24,8 @@ namespace CapaPresentacion
         private void frmProducto_Load(object sender, EventArgs e)
         {
             txtstock.Text = "0";
-            txtpreciocompra.Text = "0";
-            txtprecioventa.Text = "0";
+            txtpreciocompra.Text = "0.00";
+            txtprecioventa.Text = "0.00";
 
             cboestado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "No activo" });
             cboestado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
@@ -101,6 +101,10 @@ namespace CapaPresentacion
 
                 if (idgenerado != 0)
                 {
+                    if (txtdescripcion.Text=="")
+                    {
+                        txtdescripcion.Text = "-";
+                    }
                     dgvdata.Rows.Add(new object[] {"",
                         idgenerado,
                         txtcodigo.Text,
@@ -154,8 +158,8 @@ namespace CapaPresentacion
             txtnombre.Text = "";
             txtdescripcion.Text = "";
             txtstock.Text = "0";
-            txtpreciocompra.Text = "0";
-            txtprecioventa.Text = "0";
+            txtpreciocompra.Text = "0.00";
+            txtprecioventa.Text = "0.00";
             cboestado.SelectedIndex = 1;
             cbocategoria.SelectedIndex = 1;
             txtindice.Text = "-1";
