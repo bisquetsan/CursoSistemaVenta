@@ -22,17 +22,17 @@ namespace CapaNegocio
             Mensaje = string.Empty;
 
             if (obj.Documento == "") {
-                Mensaje += "Es necesaio el documento del usuario\n";
+                Mensaje += "Es necesario el documento del usuario\n";
             }
 
             if (obj.NombreCompleto == "")
             {
-                Mensaje += "Es necesaio el Nombre del usuario\n";
+                Mensaje += "Es necesario el Nombre del usuario\n";
             }
 
             if(obj.Clave == "")
             {
-                Mensaje += "Es necesaio la clave del usuario\n";
+                Mensaje += "Es necesario la clave del usuario\n";
             }
             if (Mensaje != string.Empty)
             {
@@ -48,17 +48,17 @@ namespace CapaNegocio
 
             if (obj.Documento == "")
             {
-                Mensaje += "Es necesaio el documento del usuario\n";
+                Mensaje += "Es necesario el documento del usuario\n";
             }
 
             if (obj.NombreCompleto == "")
             {
-                Mensaje += "Es necesaio el Nombre del usuario\n";
+                Mensaje += "Es necesario el Nombre del usuario\n";
             }
 
             if (obj.Clave == "")
             {
-                Mensaje += "Es necesaio la clave del usuario\n";
+                Mensaje += "Es necesario la clave del usuario\n";
             }
             if (Mensaje != string.Empty)
             {

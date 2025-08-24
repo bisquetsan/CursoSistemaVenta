@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             txt = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -290,15 +290,15 @@
             dgvdata.AllowUserToAddRows = false;
             dgvdata.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvdata.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Verdana", 10F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Verdana", 10F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvdata.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvdata.Columns.AddRange(new DataGridViewColumn[] { btnseleccionar, IdUsuario, Documento, NombreCompleto, Correo, Clave, IdRol, Rol, EstadoValor, Estado });
             dgvdata.Location = new Point(305, 110);
@@ -306,10 +306,10 @@
             dgvdata.MultiSelect = false;
             dgvdata.Name = "dgvdata";
             dgvdata.ReadOnly = true;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.SelectionBackColor = Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvdata.RowTemplate.Height = 28;
             dgvdata.Size = new Size(761, 459);
             dgvdata.TabIndex = 19;
@@ -416,7 +416,6 @@
             // 
             // label10
             // 
-            label10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label10.AutoSize = true;
             label10.BackColor = Color.White;
             label10.Font = new Font("Segoe UI", 10F);
@@ -428,7 +427,6 @@
             // 
             // txtbusqueda
             // 
-            txtbusqueda.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtbusqueda.Font = new Font("Segoe UI", 10F);
             txtbusqueda.Location = new Point(507, 19);
             txtbusqueda.Name = "txtbusqueda";
@@ -437,7 +435,6 @@
             // 
             // cbobusqueda
             // 
-            cbobusqueda.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cbobusqueda.DropDownStyle = ComboBoxStyle.DropDownList;
             cbobusqueda.Font = new Font("Segoe UI", 10F);
             cbobusqueda.FormattingEnabled = true;
@@ -448,7 +445,6 @@
             // 
             // btnlimpiarbuscador
             // 
-            btnlimpiarbuscador.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnlimpiarbuscador.BackColor = Color.RoyalBlue;
             btnlimpiarbuscador.Cursor = Cursors.Hand;
             btnlimpiarbuscador.FlatAppearance.BorderColor = Color.Black;
@@ -468,7 +464,6 @@
             // 
             // btnbusqueda
             // 
-            btnbusqueda.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnbusqueda.BackColor = Color.ForestGreen;
             btnbusqueda.Cursor = Cursors.Hand;
             btnbusqueda.FlatAppearance.BorderColor = Color.Black;
