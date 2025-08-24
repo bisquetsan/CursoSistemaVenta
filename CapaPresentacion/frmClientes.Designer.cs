@@ -85,7 +85,6 @@
             // 
             // btnbusqueda
             // 
-            btnbusqueda.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnbusqueda.BackColor = Color.ForestGreen;
             btnbusqueda.Cursor = Cursors.Hand;
             btnbusqueda.FlatAppearance.BorderColor = Color.Black;
@@ -105,7 +104,6 @@
             // 
             // btnlimpiarbuscador
             // 
-            btnlimpiarbuscador.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnlimpiarbuscador.BackColor = Color.RoyalBlue;
             btnlimpiarbuscador.Cursor = Cursors.Hand;
             btnlimpiarbuscador.FlatAppearance.BorderColor = Color.Black;
@@ -125,7 +123,6 @@
             // 
             // cbobusqueda
             // 
-            cbobusqueda.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cbobusqueda.DropDownStyle = ComboBoxStyle.DropDownList;
             cbobusqueda.Font = new Font("Segoe UI", 10F);
             cbobusqueda.FormattingEnabled = true;
@@ -136,7 +133,6 @@
             // 
             // txtbusqueda
             // 
-            txtbusqueda.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtbusqueda.Font = new Font("Segoe UI", 10F);
             txtbusqueda.Location = new Point(507, 19);
             txtbusqueda.Name = "txtbusqueda";
@@ -145,7 +141,6 @@
             // 
             // label10
             // 
-            label10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label10.AutoSize = true;
             label10.BackColor = Color.White;
             label10.Font = new Font("Segoe UI", 10F);
