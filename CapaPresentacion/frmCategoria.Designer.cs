@@ -218,6 +218,7 @@
             dgvdata.AllowUserToAddRows = false;
             dgvdata.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvdata.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvdata.BackgroundColor = Color.White;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Verdana", 10F);
@@ -297,7 +298,7 @@
             // 
             label11.BackColor = Color.White;
             label11.Font = new Font("Segoe UI", 17F);
-            label11.Location = new Point(2, 12);
+            label11.Location = new Point(0, 12);
             label11.Name = "label11";
             label11.Size = new Size(231, 36);
             label11.TabIndex = 20;

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using CapaDatos;
+using CapaEntidad;
+using CapaNegocio;
+using CapaPresentacion.Utilidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,11 +10,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using CapaPresentacion.Utilidades;
-using CapaEntidad;
-using CapaNegocio;
 using System.Windows.Controls;
+using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
@@ -30,9 +31,9 @@ namespace CapaPresentacion
             cboestado.SelectedIndex = 1;
 
             List<Rol> listaRol = new CN_Rol().Listar();
-            foreach (Rol rol in listaRol)
+            foreach (Rol item in listaRol)
             {
-                cborol.Items.Add(new OpcionCombo() { Valor = rol.IdRol, Texto = rol.Descripcion });
+                cborol.Items.Add(new OpcionCombo() { Valor = item.IdRol, Texto = item.Descripcion });
             }
             cborol.DisplayMember = "Texto";
             cborol.ValueMember = "Valor";
@@ -189,8 +190,24 @@ namespace CapaPresentacion
                     txtcorreo.Text = dgvdata.Rows[indice].Cells["Correo"].Value.ToString();
                     txtclave.Text = dgvdata.Rows[indice].Cells["Clave"].Value.ToString();
                     txtconfimarclave.Text = dgvdata.Rows[indice].Cells["Clave"].Value.ToString();
-                    cborol.SelectedIndex = Convert.ToInt32(dgvdata.Rows[indice].Cells["IdRol"].Value) - 1;
-                    cboestado.SelectedIndex = Convert.ToInt32(dgvdata.Rows[indice].Cells["EstadoValor"].Value);
+                    foreach (OpcionCombo item in cborol.Items)
+                    {
+                        if (Convert.ToInt32(item.Valor) == Convert.ToInt32(dgvdata.Rows[indice].Cells["IdRol"].Value))
+                        {
+                            int indice_combo = cborol.Items.IndexOf(item);
+                            cborol.SelectedIndex = indice_combo;
+                            break;
+                        }
+                    }
+                    foreach (OpcionCombo item in cboestado.Items)
+                    {
+                        if (Convert.ToInt32(item.Valor) == Convert.ToInt32(dgvdata.Rows[indice].Cells["EstadoValor"].Value))
+                        {
+                            int indice_combo = cboestado.Items.IndexOf(item);
+                            cboestado.SelectedIndex = indice_combo;
+                            break;
+                        }
+                    }
                 }
             }
         }
@@ -234,7 +251,7 @@ namespace CapaPresentacion
                 }
                 else
                 {
-                    mensaje = "Error al Eliminar";
+                    mensaje += "\nError al Eliminar";
                     MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
@@ -245,7 +262,7 @@ namespace CapaPresentacion
         private void btnbusqueda_Click(object sender, EventArgs e)
         {
             string columnafiltro = ((OpcionCombo)cbobusqueda.SelectedItem).Valor.ToString();
-            if (dgvdata.Rows.Count>0)
+            if (dgvdata.Rows.Count > 0)
             {
                 foreach (DataGridViewRow row in dgvdata.Rows)
                 {
@@ -257,7 +274,7 @@ namespace CapaPresentacion
                         row.Visible = false;
                 }
             }
-             
+
         }
 
         private void btnlimpiarbuscador_Click(object sender, EventArgs e)
@@ -268,5 +285,6 @@ namespace CapaPresentacion
                 row.Visible = true;
             }
         }
+
     }
 }

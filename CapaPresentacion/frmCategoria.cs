@@ -180,7 +180,7 @@ namespace CapaPresentacion
                 }
                 else
                 {
-                    mensaje = "Error al Eliminar";
+                    mensaje += "\nError al Eliminar";
                     MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
