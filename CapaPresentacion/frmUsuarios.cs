@@ -50,19 +50,19 @@ namespace CapaPresentacion
             cbobusqueda.ValueMember = "Valor";
             cbobusqueda.SelectedIndex = 0;
 
-            List<Usuario> listausuarios = new CN_Usuario().Listar();
-            foreach (Usuario user in listausuarios)
+            List<Usuario> lista = new CN_Usuario().Listar();
+            foreach (Usuario item in lista)
             {
                 dgvdata.Rows.Add(new object[] {"",
-                    user.IdUsuario,
-                    user.Documento,
-                    user.NombreCompleto,
-                    user.Correo,
-                    user.Clave,
-                    user.oRol.IdRol,
-                    user.oRol.Descripcion,
-                    user.Estado == true ? 1:0,
-                    user.Estado == true ? "Activo":"No Activo",
+                    item.IdUsuario,
+                    item.Documento,
+                    item.NombreCompleto,
+                    item.Correo,
+                    item.Clave,
+                    item.oRol.IdRol,
+                    item.oRol.Descripcion,
+                    item.Estado == true ? 1:0,
+                    item.Estado == true ? "Activo":"No Activo",
                 });
             }
         }
@@ -94,12 +94,12 @@ namespace CapaPresentacion
 
             if (objusuario.IdUsuario == 0)
             {
-                int idusuariogenerado = new CN_Usuario().Registrar(objusuario, out mensaje);
+                int idgenerado = new CN_Usuario().Registrar(objusuario, out mensaje);
 
-                if (idusuariogenerado != 0)
+                if (idgenerado != 0)
                 {
                     dgvdata.Rows.Add(new object[] {"",
-                        idusuariogenerado,
+                        idgenerado,
                         txtdocumento.Text,
                         txtnombrecompleto.Text,
                         txtcorreo.Text,
