@@ -31,6 +31,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            btnexcel = new FontAwesome.Sharp.IconButton();
             btnbusqueda = new FontAwesome.Sharp.IconButton();
             btnlimpiarbuscador = new FontAwesome.Sharp.IconButton();
             cbobusqueda = new ComboBox();
@@ -82,16 +83,34 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(btnexcel);
             panel1.Controls.Add(btnbusqueda);
             panel1.Controls.Add(btnlimpiarbuscador);
             panel1.Controls.Add(cbobusqueda);
             panel1.Controls.Add(txtbusqueda);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(label9);
-            panel1.Location = new Point(305, 25);
+            panel1.Location = new Point(305, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(761, 64);
+            panel1.Size = new Size(761, 77);
             panel1.TabIndex = 31;
+            // 
+            // btnexcel
+            // 
+            btnexcel.Font = new Font("Segoe UI", 10F);
+            btnexcel.ForeColor = Color.Black;
+            btnexcel.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            btnexcel.IconColor = Color.FromArgb(0, 192, 0);
+            btnexcel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnexcel.IconSize = 20;
+            btnexcel.Location = new Point(24, 43);
+            btnexcel.Name = "btnexcel";
+            btnexcel.Size = new Size(142, 27);
+            btnexcel.TabIndex = 27;
+            btnexcel.Text = "Descargar Excel";
+            btnexcel.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnexcel.UseVisualStyleBackColor = true;
+            btnexcel.Click += iconButton1_Click;
             // 
             // btnbusqueda
             // 
@@ -105,7 +124,7 @@
             btnbusqueda.IconColor = Color.White;
             btnbusqueda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnbusqueda.IconSize = 20;
-            btnbusqueda.Location = new Point(649, 19);
+            btnbusqueda.Location = new Point(654, 44);
             btnbusqueda.Name = "btnbusqueda";
             btnbusqueda.Size = new Size(49, 25);
             btnbusqueda.TabIndex = 25;
@@ -125,7 +144,7 @@
             btnlimpiarbuscador.IconColor = Color.White;
             btnlimpiarbuscador.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnlimpiarbuscador.IconSize = 20;
-            btnlimpiarbuscador.Location = new Point(704, 19);
+            btnlimpiarbuscador.Location = new Point(709, 44);
             btnlimpiarbuscador.Name = "btnlimpiarbuscador";
             btnlimpiarbuscador.Size = new Size(49, 25);
             btnlimpiarbuscador.TabIndex = 26;
@@ -139,7 +158,7 @@
             cbobusqueda.DropDownStyle = ComboBoxStyle.DropDownList;
             cbobusqueda.Font = new Font("Segoe UI", 10F);
             cbobusqueda.FormattingEnabled = true;
-            cbobusqueda.Location = new Point(368, 19);
+            cbobusqueda.Location = new Point(373, 44);
             cbobusqueda.Name = "cbobusqueda";
             cbobusqueda.Size = new Size(133, 25);
             cbobusqueda.TabIndex = 22;
@@ -148,7 +167,7 @@
             // 
             txtbusqueda.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtbusqueda.Font = new Font("Segoe UI", 10F);
-            txtbusqueda.Location = new Point(507, 19);
+            txtbusqueda.Location = new Point(512, 44);
             txtbusqueda.Name = "txtbusqueda";
             txtbusqueda.Size = new Size(136, 25);
             txtbusqueda.TabIndex = 24;
@@ -159,7 +178,7 @@
             label10.AutoSize = true;
             label10.BackColor = Color.White;
             label10.Font = new Font("Segoe UI", 10F);
-            label10.Location = new Point(288, 23);
+            label10.Location = new Point(293, 48);
             label10.Name = "label10";
             label10.Size = new Size(77, 19);
             label10.TabIndex = 23;
@@ -169,7 +188,7 @@
             // 
             label9.BackColor = Color.White;
             label9.Font = new Font("Segoe UI", 17F);
-            label9.Location = new Point(0, 12);
+            label9.Location = new Point(0, 0);
             label9.Name = "label9";
             label9.Size = new Size(227, 36);
             label9.TabIndex = 20;
@@ -595,7 +614,6 @@
         private ComboBox cbobusqueda;
         private TextBox txtbusqueda;
         private Label label10;
-        private Label label9;
         private DataGridViewTextBoxColumn Documento;
         private DataGridViewTextBoxColumn NombreCompleto;
         private DataGridViewTextBoxColumn Correo;
@@ -639,5 +657,7 @@
         private DataGridViewTextBoxColumn Stock;
         private DataGridViewTextBoxColumn EstadoValor;
         private DataGridViewTextBoxColumn Estado;
+        private FontAwesome.Sharp.IconButton btnexcel;
+        private Label label9;
     }
 }

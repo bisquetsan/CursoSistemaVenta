@@ -2,6 +2,7 @@
 using CapaEntidad;
 using CapaNegocio;
 using CapaPresentacion.Utilidades;
+using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -101,7 +102,7 @@ namespace CapaPresentacion
 
                 if (idgenerado != 0)
                 {
-                    if (txtdescripcion.Text=="")
+                    if (txtdescripcion.Text == "")
                     {
                         txtdescripcion.Text = "-";
                     }
@@ -291,6 +292,61 @@ namespace CapaPresentacion
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            if (dgvdata.Rows.Count < 0)
+            {
+                MessageBox.Show("No hay datos que exportar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                
+                foreach (DataGridViewColumn item in dgvdata.Columns)
+                {
+                    if (item.HeaderText != "" && item.Visible)
+                        dt.Columns.Add(item.HeaderText, typeof(string));
+                }
+
+                foreach (DataGridViewRow item in dgvdata.Rows)
+                {
+                    if (item.Visible)
+                    {
+                        dt.Rows.Add(new object[]
+                        {
+                            item.Cells[2].Value.ToString(),
+                            item.Cells[3].Value.ToString(),
+                            item.Cells[4].Value.ToString(),
+                            item.Cells[6].Value.ToString(),
+                            item.Cells[7].Value.ToString(),
+                            item.Cells[8].Value.ToString(),
+                            item.Cells[9].Value.ToString(),
+                            item.Cells[11].Value.ToString(),
+                        });
+                    }
+                }
+                SaveFileDialog savefile =  new SaveFileDialog();
+                savefile.FileName = string.Format("ReporteProducto_{0}.xlsx",DateTime.Now.ToString("ddMMyyyyHHmmss"));
+                savefile.Filter = "Excel files | *.xlsx";
+                if(savefile.ShowDialog() == DialogResult.OK)
+                {
+                    try 
+                    {
+                        XLWorkbook wp = new XLWorkbook();
+                        var hoja = wp.Worksheets.Add(dt,"Informe");
+                        hoja.ColumnsUsed().AdjustToContents();
+                        wp.SaveAs(savefile.FileName);
+                        MessageBox.Show("Reporte Generado", "Mensaje",MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error al generar reporte", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+            }
         }
     }
 }

@@ -136,12 +136,10 @@ namespace CapaPresentacion
                 }
                 else
                 {
-                    mensaje = "Error al editar";
+                    mensaje += "Error al editar";
                     MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK);
                 }
             }
-
-
         }
 
         private void Limpiar()
