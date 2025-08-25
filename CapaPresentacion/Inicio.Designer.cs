@@ -34,6 +34,7 @@ namespace CapaPresentacion
             menumantenedor = new FontAwesome.Sharp.IconMenuItem();
             submenucategoria = new FontAwesome.Sharp.IconMenuItem();
             submenuproducto = new FontAwesome.Sharp.IconMenuItem();
+            submenunegocio = new ToolStripMenuItem();
             menucompras = new FontAwesome.Sharp.IconMenuItem();
             submenuregistrarcompra = new FontAwesome.Sharp.IconMenuItem();
             submenuverdetallecompra = new FontAwesome.Sharp.IconMenuItem();
@@ -82,7 +83,7 @@ namespace CapaPresentacion
             // menumantenedor
             // 
             menumantenedor.AutoSize = false;
-            menumantenedor.DropDownItems.AddRange(new ToolStripItem[] { submenucategoria, submenuproducto });
+            menumantenedor.DropDownItems.AddRange(new ToolStripItem[] { submenucategoria, submenuproducto, submenunegocio });
             menumantenedor.IconChar = FontAwesome.Sharp.IconChar.Tools;
             menumantenedor.IconColor = Color.Black;
             menumantenedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -98,7 +99,7 @@ namespace CapaPresentacion
             submenucategoria.IconColor = Color.Black;
             submenucategoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
             submenucategoria.Name = "submenucategoria";
-            submenucategoria.Size = new Size(125, 22);
+            submenucategoria.Size = new Size(180, 22);
             submenucategoria.Text = "Categoria";
             submenucategoria.Click += submenucategoria_Click;
             // 
@@ -108,9 +109,16 @@ namespace CapaPresentacion
             submenuproducto.IconColor = Color.Black;
             submenuproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             submenuproducto.Name = "submenuproducto";
-            submenuproducto.Size = new Size(125, 22);
+            submenuproducto.Size = new Size(180, 22);
             submenuproducto.Text = "Producto";
             submenuproducto.Click += submenuproducto_Click;
+            // 
+            // submenunegocio
+            // 
+            submenunegocio.Name = "submenunegocio";
+            submenunegocio.Size = new Size(180, 22);
+            submenunegocio.Text = "Negocio";
+            submenunegocio.Click += submenunegocio_Click;
             // 
             // menucompras
             // 
@@ -355,5 +363,6 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconMenuItem submenuregistrarventa;
         private FontAwesome.Sharp.IconMenuItem submenuverdetalleventa;
         private FontAwesome.Sharp.IconMenuItem logout_btn;
+        private ToolStripMenuItem submenunegocio;
     }
 }
