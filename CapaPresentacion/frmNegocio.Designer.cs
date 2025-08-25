@@ -83,27 +83,27 @@
             groupBox1.Controls.Add(piclogo);
             groupBox1.Location = new Point(27, 49);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(524, 463);
+            groupBox1.Size = new Size(524, 346);
             groupBox1.TabIndex = 19;
             groupBox1.TabStop = false;
             // 
             // txtdireccion
             // 
-            txtdireccion.Location = new Point(234, 177);
+            txtdireccion.Location = new Point(227, 224);
             txtdireccion.Name = "txtdireccion";
             txtdireccion.Size = new Size(261, 23);
             txtdireccion.TabIndex = 8;
             // 
             // txtruc
             // 
-            txtruc.Location = new Point(234, 121);
+            txtruc.Location = new Point(227, 152);
             txtruc.Name = "txtruc";
             txtruc.Size = new Size(261, 23);
             txtruc.TabIndex = 7;
             // 
             // txtnombre
             // 
-            txtnombre.Location = new Point(234, 65);
+            txtnombre.Location = new Point(227, 80);
             txtnombre.Name = "txtnombre";
             txtnombre.Size = new Size(261, 23);
             txtnombre.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(234, 156);
+            label5.Location = new Point(227, 200);
             label5.Name = "label5";
             label5.Size = new Size(82, 18);
             label5.TabIndex = 5;
@@ -122,7 +122,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(234, 100);
+            label4.Location = new Point(227, 128);
             label4.Name = "label4";
             label4.Size = new Size(62, 18);
             label4.TabIndex = 4;
@@ -132,7 +132,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(234, 44);
+            label3.Location = new Point(227, 56);
             label3.Name = "label3";
             label3.Size = new Size(159, 18);
             label3.TabIndex = 3;
@@ -145,7 +145,7 @@
             btnguardar.IconColor = Color.Black;
             btnguardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnguardar.IconSize = 20;
-            btnguardar.Location = new Point(234, 230);
+            btnguardar.Location = new Point(227, 277);
             btnguardar.Name = "btnguardar";
             btnguardar.Size = new Size(261, 29);
             btnguardar.TabIndex = 2;
@@ -161,9 +161,9 @@
             btnsubir.IconColor = Color.Black;
             btnsubir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnsubir.IconSize = 20;
-            btnsubir.Location = new Point(26, 230);
+            btnsubir.Location = new Point(6, 277);
             btnsubir.Name = "btnsubir";
-            btnsubir.Size = new Size(164, 29);
+            btnsubir.Size = new Size(197, 29);
             btnsubir.TabIndex = 2;
             btnsubir.Text = "Subir";
             btnsubir.TextAlign = ContentAlignment.MiddleRight;
@@ -175,7 +175,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Verdana", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(26, 22);
+            label1.Location = new Point(6, 19);
             label1.Name = "label1";
             label1.Size = new Size(52, 18);
             label1.TabIndex = 1;
@@ -184,9 +184,9 @@
             // piclogo
             // 
             piclogo.BorderStyle = BorderStyle.FixedSingle;
-            piclogo.Location = new Point(26, 49);
+            piclogo.Location = new Point(6, 46);
             piclogo.Name = "piclogo";
-            piclogo.Size = new Size(164, 167);
+            piclogo.Size = new Size(197, 213);
             piclogo.SizeMode = PictureBoxSizeMode.StretchImage;
             piclogo.TabIndex = 0;
             piclogo.TabStop = false;
