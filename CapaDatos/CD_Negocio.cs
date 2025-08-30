@@ -60,7 +60,7 @@ namespace CapaDatos
                     conexion.Open();
                     StringBuilder query = new StringBuilder();
                     query.AppendLine("update NEGOCIO set Nombre = @Nombre,");
-                    query.AppendLine("RUC = @RUC");
+                    query.AppendLine("RUC = @RUC,");
                     query.AppendLine("Direccion = @Direccion");
                     query.AppendLine("where IdNegocio = 1");
 

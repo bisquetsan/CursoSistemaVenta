@@ -491,9 +491,6 @@
         private TextBox txtbusqueda;
         private Label label10;
         private Label label9;
-        private DataGridViewTextBoxColumn Clave;
-        private DataGridViewTextBoxColumn IdRol;
-        private DataGridViewTextBoxColumn Rol;
         private TextBox txtindice;
         private TextBox txtid;
         private Panel panel2;
@@ -502,7 +499,6 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private Label label6;
         private FontAwesome.Sharp.IconButton btneliminar;
         private TextBox txtdocumento;
         private FontAwesome.Sharp.IconButton btnlimpiar;
@@ -511,10 +507,7 @@
         private TextBox txtcorreo;
         private Label label8;
         private TextBox txtelefono;
-        private Label label7;
-        private TextBox txtconfimarclave;
         private ComboBox cboestado;
-        private ComboBox cborol;
         private DataGridView dgvdata;
         private DataGridViewButtonColumn btnseleccionar;
         private DataGridViewTextBoxColumn Id;

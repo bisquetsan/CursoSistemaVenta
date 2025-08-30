@@ -10,6 +10,7 @@ namespace CapaPresentacion
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
             ApplicationConfiguration.Initialize();
             Application.Run(new Inicio());
         }
