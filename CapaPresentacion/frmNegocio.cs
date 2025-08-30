@@ -45,7 +45,7 @@ namespace CapaPresentacion
         {
             string mensaje = string.Empty;
             OpenFileDialog op = new OpenFileDialog();
-            op.FileName = "Files|;*.png;*.jpg;";
+            op.Filter = "Archivos de imagenes|*.jpg;*.jpeg;*.png|Todos los archivos|*.*";
 
             if (op.ShowDialog() == DialogResult.OK)
             {
@@ -56,8 +56,28 @@ namespace CapaPresentacion
                     piclogo.Image = ByteToImgage(milogo);
                 }
                 else
-                    MessageBox.Show(mensaje, "Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            string mensaje = string.Empty;
+            Negocio obj = new Negocio()
+            {
+                Nombre = txtnombre.Text,
+                RUC = txtruc.Text,
+                Direccion = txtdireccion.Text,
+            };
+
+            bool respuesta = new CN_Negocio().GuardarDatos(obj, out mensaje);
+            if (respuesta)
+            {
+                MessageBox.Show("Los cambios fueron guardados", "Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
         }
     }
 }

@@ -65,7 +65,6 @@ namespace CapaPresentacion
             Menu.Size = new Size(1184, 73);
             Menu.TabIndex = 0;
             Menu.Text = "menuStrip1";
-            Menu.ItemClicked += menuStrip1_ItemClicked;
             // 
             // menuusuarios
             // 
@@ -99,7 +98,7 @@ namespace CapaPresentacion
             submenucategoria.IconColor = Color.Black;
             submenucategoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
             submenucategoria.Name = "submenucategoria";
-            submenucategoria.Size = new Size(180, 22);
+            submenucategoria.Size = new Size(125, 22);
             submenucategoria.Text = "Categoria";
             submenucategoria.Click += submenucategoria_Click;
             // 
@@ -109,14 +108,14 @@ namespace CapaPresentacion
             submenuproducto.IconColor = Color.Black;
             submenuproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             submenuproducto.Name = "submenuproducto";
-            submenuproducto.Size = new Size(180, 22);
+            submenuproducto.Size = new Size(125, 22);
             submenuproducto.Text = "Producto";
             submenuproducto.Click += submenuproducto_Click;
             // 
             // submenunegocio
             // 
             submenunegocio.Name = "submenunegocio";
-            submenunegocio.Size = new Size(180, 22);
+            submenunegocio.Size = new Size(125, 22);
             submenunegocio.Text = "Negocio";
             submenunegocio.Click += submenunegocio_Click;
             // 
@@ -332,12 +331,6 @@ namespace CapaPresentacion
             MenuTitulo.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
-        }
-
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            int x = 1;
         }
 
         #endregion

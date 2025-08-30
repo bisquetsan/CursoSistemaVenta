@@ -262,6 +262,7 @@
             txtprecioventa.Name = "txtprecioventa";
             txtprecioventa.Size = new Size(212, 23);
             txtprecioventa.TabIndex = 46;
+            txtprecioventa.Text = "0.00";
             // 
             // txt
             // 
@@ -422,6 +423,7 @@
             txtstock.Name = "txtstock";
             txtstock.Size = new Size(212, 23);
             txtstock.TabIndex = 36;
+            txtstock.Text = "0";
             // 
             // label7
             // 
@@ -440,6 +442,7 @@
             txtpreciocompra.Name = "txtpreciocompra";
             txtpreciocompra.Size = new Size(212, 23);
             txtpreciocompra.TabIndex = 37;
+            txtpreciocompra.Text = "0.00";
             // 
             // cboestado
             // 
@@ -614,13 +617,6 @@
         private ComboBox cbobusqueda;
         private TextBox txtbusqueda;
         private Label label10;
-        private DataGridViewTextBoxColumn Documento;
-        private DataGridViewTextBoxColumn NombreCompleto;
-        private DataGridViewTextBoxColumn Correo;
-        private DataGridViewTextBoxColumn Clave;
-        private DataGridViewTextBoxColumn IdRol;
-        private DataGridViewTextBoxColumn Rol;
-        private DataGridViewTextBoxColumn IdUsuario;
         private TextBox txtindice;
         private TextBox txtid;
         private Panel panel2;
