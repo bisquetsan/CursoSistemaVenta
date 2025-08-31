@@ -161,6 +161,7 @@
             txtidproveedor.Name = "txtidproveedor";
             txtidproveedor.Size = new Size(31, 25);
             txtidproveedor.TabIndex = 35;
+            txtidproveedor.Visible = false;
             // 
             // txtrazonsocial
             // 
@@ -254,6 +255,7 @@
             txtidproducto.Name = "txtidproducto";
             txtidproducto.Size = new Size(31, 25);
             txtidproducto.TabIndex = 36;
+            txtidproducto.Visible = false;
             // 
             // txtprecioventa
             // 
@@ -405,6 +407,7 @@
             btnregistrar.TextAlign = ContentAlignment.MiddleRight;
             btnregistrar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnregistrar.UseVisualStyleBackColor = true;
+            btnregistrar.Click += btnregistrar_Click;
             // 
             // txttotalapagar
             // 
