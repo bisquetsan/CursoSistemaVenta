@@ -58,7 +58,7 @@ namespace CapaPresentacion
             // Menu
             // 
             Menu.BackColor = Color.White;
-            Menu.Items.AddRange(new ToolStripItem[] { menuusuarios, menumantenedor, menucompras, menuventas, menuclientes, menuproveedores, menureportes, menuacercade });
+            Menu.Items.AddRange(new ToolStripItem[] { menucompras, menuventas, menuclientes, menuproveedores, menureportes, menumantenedor, menuusuarios, menuacercade });
             Menu.Location = new Point(0, 72);
             Menu.Name = "Menu";
             Menu.RightToLeft = RightToLeft.No;
@@ -88,8 +88,8 @@ namespace CapaPresentacion
             menumantenedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             menumantenedor.ImageScaling = ToolStripItemImageScaling.None;
             menumantenedor.Name = "menumantenedor";
-            menumantenedor.Size = new Size(80, 69);
-            menumantenedor.Text = "Mantenedor";
+            menumantenedor.Size = new Size(90, 69);
+            menumantenedor.Text = "Mantenimiento";
             menumantenedor.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
             // submenucategoria
@@ -98,7 +98,7 @@ namespace CapaPresentacion
             submenucategoria.IconColor = Color.Black;
             submenucategoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
             submenucategoria.Name = "submenucategoria";
-            submenucategoria.Size = new Size(125, 22);
+            submenucategoria.Size = new Size(180, 22);
             submenucategoria.Text = "Categoria";
             submenucategoria.Click += submenucategoria_Click;
             // 
@@ -108,14 +108,14 @@ namespace CapaPresentacion
             submenuproducto.IconColor = Color.Black;
             submenuproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             submenuproducto.Name = "submenuproducto";
-            submenuproducto.Size = new Size(125, 22);
+            submenuproducto.Size = new Size(180, 22);
             submenuproducto.Text = "Producto";
             submenuproducto.Click += submenuproducto_Click;
             // 
             // submenunegocio
             // 
             submenunegocio.Name = "submenunegocio";
-            submenunegocio.Size = new Size(125, 22);
+            submenunegocio.Size = new Size(180, 22);
             submenunegocio.Text = "Negocio";
             submenunegocio.Click += submenunegocio_Click;
             // 

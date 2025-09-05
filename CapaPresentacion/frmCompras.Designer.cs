@@ -89,7 +89,7 @@
             groupBox1.Margin = new Padding(4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4);
-            groupBox1.Size = new Size(456, 95);
+            groupBox1.Size = new Size(446, 95);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Información Compra";
@@ -102,7 +102,7 @@
             cbotipodocumento.FormattingEnabled = true;
             cbotipodocumento.Location = new Point(196, 56);
             cbotipodocumento.Name = "cbotipodocumento";
-            cbotipodocumento.Size = new Size(253, 25);
+            cbotipodocumento.Size = new Size(243, 25);
             cbotipodocumento.TabIndex = 25;
             // 
             // txtfecha
@@ -144,11 +144,11 @@
             groupBox2.Controls.Add(label4);
             groupBox2.Controls.Add(label5);
             groupBox2.Font = new Font("Arial Narrow", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(489, 65);
+            groupBox2.Location = new Point(479, 65);
             groupBox2.Margin = new Padding(4);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(4);
-            groupBox2.Size = new Size(539, 95);
+            groupBox2.Size = new Size(512, 95);
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             groupBox2.Text = "Información Proveedor";
@@ -157,7 +157,7 @@
             // 
             txtidproveedor.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtidproveedor.Font = new Font("Segoe UI", 10F);
-            txtidproveedor.Location = new Point(496, 24);
+            txtidproveedor.Location = new Point(469, 24);
             txtidproveedor.Name = "txtidproveedor";
             txtidproveedor.Size = new Size(31, 25);
             txtidproveedor.TabIndex = 35;
@@ -171,7 +171,7 @@
             txtrazonsocial.Location = new Point(247, 55);
             txtrazonsocial.Name = "txtrazonsocial";
             txtrazonsocial.ReadOnly = true;
-            txtrazonsocial.Size = new Size(280, 25);
+            txtrazonsocial.Size = new Size(253, 25);
             txtrazonsocial.TabIndex = 27;
             // 
             // btnbusquedaproveedor
@@ -242,7 +242,7 @@
             groupBox3.Margin = new Padding(4);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(4);
-            groupBox3.Size = new Size(877, 95);
+            groupBox3.Size = new Size(840, 95);
             groupBox3.TabIndex = 3;
             groupBox3.TabStop = false;
             groupBox3.Text = "Información Compra";
@@ -251,7 +251,7 @@
             // 
             txtidproducto.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtidproducto.Font = new Font("Segoe UI", 10F);
-            txtidproducto.Location = new Point(182, 25);
+            txtidproducto.Location = new Point(174, 25);
             txtidproducto.Name = "txtidproducto";
             txtidproducto.Size = new Size(31, 25);
             txtidproducto.TabIndex = 36;
@@ -261,7 +261,7 @@
             // 
             txtprecioventa.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtprecioventa.Font = new Font("Segoe UI", 10F);
-            txtprecioventa.Location = new Point(630, 56);
+            txtprecioventa.Location = new Point(593, 56);
             txtprecioventa.Name = "txtprecioventa";
             txtprecioventa.Size = new Size(135, 25);
             txtprecioventa.TabIndex = 34;
@@ -271,7 +271,7 @@
             // 
             label9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label9.AutoSize = true;
-            label9.Location = new Point(769, 32);
+            label9.Location = new Point(732, 34);
             label9.Name = "label9";
             label9.Size = new Size(62, 20);
             label9.TabIndex = 33;
@@ -280,7 +280,7 @@
             // numericstock
             // 
             numericstock.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            numericstock.Location = new Point(771, 56);
+            numericstock.Location = new Point(734, 56);
             numericstock.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             numericstock.Name = "numericstock";
             numericstock.Size = new Size(99, 25);
@@ -290,7 +290,7 @@
             // 
             label8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label8.AutoSize = true;
-            label8.Location = new Point(628, 32);
+            label8.Location = new Point(590, 34);
             label8.Name = "label8";
             label8.Size = new Size(82, 20);
             label8.TabIndex = 31;
@@ -300,7 +300,7 @@
             // 
             txtpreciocompra.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtpreciocompra.Font = new Font("Segoe UI", 10F);
-            txtpreciocompra.Location = new Point(489, 56);
+            txtpreciocompra.Location = new Point(452, 56);
             txtpreciocompra.Name = "txtpreciocompra";
             txtpreciocompra.Size = new Size(135, 25);
             txtpreciocompra.TabIndex = 30;
@@ -310,7 +310,7 @@
             // 
             label7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label7.AutoSize = true;
-            label7.Location = new Point(487, 34);
+            label7.Location = new Point(450, 34);
             label7.Name = "label7";
             label7.Size = new Size(96, 20);
             label7.TabIndex = 29;
@@ -321,10 +321,10 @@
             txtnombreproducto.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtnombreproducto.BackColor = SystemColors.Control;
             txtnombreproducto.Font = new Font("Segoe UI", 10F);
-            txtnombreproducto.Location = new Point(265, 56);
+            txtnombreproducto.Location = new Point(257, 56);
             txtnombreproducto.Name = "txtnombreproducto";
             txtnombreproducto.ReadOnly = true;
-            txtnombreproducto.Size = new Size(218, 25);
+            txtnombreproducto.Size = new Size(189, 25);
             txtnombreproducto.TabIndex = 28;
             // 
             // btnbusquedaproducto
@@ -338,7 +338,7 @@
             btnbusquedaproducto.IconColor = Color.Black;
             btnbusquedaproducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnbusquedaproducto.IconSize = 20;
-            btnbusquedaproducto.Location = new Point(219, 56);
+            btnbusquedaproducto.Location = new Point(211, 56);
             btnbusquedaproducto.Name = "btnbusquedaproducto";
             btnbusquedaproducto.Size = new Size(40, 25);
             btnbusquedaproducto.TabIndex = 27;
@@ -351,7 +351,7 @@
             txtcodigoproducto.Font = new Font("Segoe UI", 10F);
             txtcodigoproducto.Location = new Point(7, 56);
             txtcodigoproducto.Name = "txtcodigoproducto";
-            txtcodigoproducto.Size = new Size(206, 25);
+            txtcodigoproducto.Size = new Size(198, 25);
             txtcodigoproducto.TabIndex = 26;
             txtcodigoproducto.KeyDown += txtcodigoproducto_KeyDown;
             // 
@@ -359,7 +359,7 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(262, 34);
+            label1.Location = new Point(254, 34);
             label1.Name = "label1";
             label1.Size = new Size(62, 20);
             label1.TabIndex = 1;
@@ -381,7 +381,7 @@
             btnagregar.IconColor = Color.Black;
             btnagregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnagregar.IconSize = 52;
-            btnagregar.Location = new Point(909, 176);
+            btnagregar.Location = new Point(872, 176);
             btnagregar.Name = "btnagregar";
             btnagregar.Size = new Size(119, 87);
             btnagregar.TabIndex = 4;
@@ -399,7 +399,7 @@
             btnregistrar.IconColor = Color.DodgerBlue;
             btnregistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnregistrar.IconSize = 26;
-            btnregistrar.Location = new Point(909, 511);
+            btnregistrar.Location = new Point(872, 511);
             btnregistrar.Name = "btnregistrar";
             btnregistrar.Size = new Size(119, 30);
             btnregistrar.TabIndex = 5;
@@ -414,7 +414,7 @@
             txttotalapagar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             txttotalapagar.BackColor = SystemColors.Control;
             txttotalapagar.Font = new Font("Segoe UI", 10F);
-            txttotalapagar.Location = new Point(909, 479);
+            txttotalapagar.Location = new Point(872, 479);
             txttotalapagar.Name = "txttotalapagar";
             txttotalapagar.ReadOnly = true;
             txttotalapagar.Size = new Size(119, 25);
@@ -425,7 +425,7 @@
             // 
             label10.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label10.AutoSize = true;
-            label10.Location = new Point(906, 456);
+            label10.Location = new Point(868, 457);
             label10.Name = "label10";
             label10.Size = new Size(87, 20);
             label10.TabIndex = 30;
@@ -439,17 +439,17 @@
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(label11);
             panel1.Controls.Add(dgvdata);
-            panel1.Controls.Add(label10);
-            panel1.Controls.Add(txttotalapagar);
-            panel1.Controls.Add(btnregistrar);
             panel1.Controls.Add(btnagregar);
             panel1.Controls.Add(groupBox3);
             panel1.Controls.Add(groupBox2);
             panel1.Controls.Add(groupBox1);
-            panel1.Location = new Point(64, 20);
+            panel1.Controls.Add(label10);
+            panel1.Controls.Add(txttotalapagar);
+            panel1.Controls.Add(btnregistrar);
+            panel1.Location = new Point(89, 20);
             panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1060, 563);
+            panel1.Size = new Size(1023, 563);
             panel1.TabIndex = 1;
             // 
             // label11
@@ -489,7 +489,7 @@
             dataGridViewCellStyle2.SelectionForeColor = Color.Black;
             dgvdata.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvdata.RowTemplate.Height = 28;
-            dgvdata.Size = new Size(877, 265);
+            dgvdata.Size = new Size(840, 265);
             dgvdata.TabIndex = 31;
             dgvdata.CellContentClick += dgvdata_CellContentClick;
             dgvdata.CellPainting += dgvdata_CellPainting;
@@ -528,6 +528,7 @@
             // 
             // Subtotal
             // 
+            Subtotal.FillWeight = 80F;
             Subtotal.HeaderText = "Sub Total";
             Subtotal.Name = "Subtotal";
             Subtotal.ReadOnly = true;

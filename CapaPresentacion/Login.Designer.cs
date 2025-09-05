@@ -99,9 +99,9 @@ namespace CapaPresentacion
             label3.AutoSize = true;
             label3.Location = new Point(269, 30);
             label3.Name = "label3";
-            label3.Size = new Size(93, 15);
+            label3.Size = new Size(94, 15);
             label3.TabIndex = 5;
-            label3.Text = "Nro Documento";
+            label3.Text = "Nombre Usuario";
             label3.Click += label3_Click;
             // 
             // label4

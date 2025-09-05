@@ -12,7 +12,7 @@ namespace CapaPresentacion
             // see https://aka.ms/applicationconfiguration.
             System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
             ApplicationConfiguration.Initialize();
-            Application.Run(new Inicio());
+            Application.Run(new Login());
         }
     }
 }
